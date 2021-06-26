@@ -19,7 +19,7 @@ var walker  = walk.walk('./certificates', { followLinks: false });
 walker.on('file', function(root, stat, next) {
     // Add this file to the list of files
     let f = root + '/' + stat.name
-    f = f.replace("./", "http://localhost:8000/")
+    f = f.replace("./", "https://api-cert.abhyudayiitb.org/")
     let url = new URL(f);
     files.push(url);
     next();
